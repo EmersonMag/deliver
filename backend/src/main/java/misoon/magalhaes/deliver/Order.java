@@ -6,10 +6,6 @@ import java.time.Instant;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 
 @Entity
 @Table(name ="tb_order")
