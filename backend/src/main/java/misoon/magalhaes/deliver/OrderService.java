@@ -11,11 +11,11 @@ import java.util.stream.Collectors;
 public class OrderService {
 
     @Autowired
-    private OrderRepository Repository;
+    private OrderRepository repository;
 
     @Transactional(readOnly = true)
     public List<OrderDTO> findAll(){
-         List<Order> list = Repository.findAll();
+         List<Order> list = repository.findOrdersWithProducts();
          return  list.stream().map(x -> new OrderDTO(x)).collect(Collectors.toList());
 
     }

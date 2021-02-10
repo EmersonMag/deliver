@@ -1,11 +1,13 @@
 package misoon.magalhaes.deliver;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class OrderDTO {
+public class OrderDTO implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private Long id;
     private String address;
